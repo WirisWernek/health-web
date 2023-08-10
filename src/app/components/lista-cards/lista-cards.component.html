@@ -1,0 +1,14 @@
+<div class="container my-2">
+  <header class="text-center">
+    <h3>Sistemas Monitorados</h3>
+  </header>
+  <main>
+    <div class="d-flex flex-row flex-wrap justify-content-center">
+      <app-card
+        class="col-3 m-2"
+        *ngFor="let item of items"
+        [servico]="item" (click)="navigateTo(item.id)"
+      ></app-card>
+    </div>
+  </main>
+</div>

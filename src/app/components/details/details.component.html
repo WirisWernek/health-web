@@ -1,0 +1,31 @@
+<div class="container my-2">
+  <header class="text-center">
+    <h3>Detalhes do Sistema {{ items[0].cliente }}</h3>
+  </header>
+  <main>
+    <div class="d-flex flex-row flex-wrap justify-content-center">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id Registro</th>
+			<th>Ambiente</th>
+			<th>Sistema</th>
+			<th>Status</th>
+			<th>Dia</th>
+			<th>Hora</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items">
+            <td>{{item.id}}</td>
+			<td>{{item.ambiente}}</td>
+			<td>{{item.cliente}}</td>
+			<td>{{item.status}}</td>
+			<td>{{item.dia}}</td>
+			<td>{{item.hora}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
